@@ -97,21 +97,6 @@ void handleHkey(string hkeyName, const char *key) {
         writeValues(nameBuffer, type, valueBuffer, tempValueSize);
     }
 
-    //type poate fi: REG_DWORD, REG_SZ, REG_QWORD, .... (tipurile invatate anterior)
-    // DWORD myValue = 123456;
-    // regErrorValue = RegSetValueEx(resultedKeyHandler, "tempCSSOValue", 0, REG_DWORD, (const BYTE *) &myValue,
-    //                               sizeof(myValue));
-    // if (regErrorValue != ERROR_SUCCESS) {
-    //     ErrorExit(TRUE, regErrorValue);
-    // }
-    //
-    // unsigned long long myValueQ = 123456;
-    // regErrorValue = RegSetValueEx(resultedKeyHandler, "tempCSSOValueQ", 0, REG_QWORD, (const BYTE *) &myValueQ,
-    //                               sizeof(myValueQ));
-    // if (regErrorValue != ERROR_SUCCESS) {
-    //     ErrorExit(TRUE, regErrorValue);
-    // }
-
     RegCloseKey(resultedKeyHandler);
 }
 
@@ -154,5 +139,4 @@ int main() {
     homework03();
 
     return 0;
-    // TIP See CLion help at <a href="https://www.jetbrains.com/help/clion/">jetbrains.com/help/clion/</a>. Also, you can try interactive lessons for CLion by selecting 'Help | Learn IDE Features' from the main menu.
 }
